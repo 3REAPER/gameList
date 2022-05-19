@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_list"
+        android:enabled="true"
+        android:color="@color/white"
+        android:icon="@drawable/ic_menu_list"
+        android:title=""
+        />
+    <item
+        android:id="@+id/item_add"
+        android:enabled="true"
+        android:color="@color/white"
+        android:icon="@drawable/ic_menu_add"
+        android:title=""/>
+    <item
+        android:id="@+id/item_rating"
+        android:enabled="true"
+        android:color="@color/white"
+        android:icon="@drawable/ic_menu_star"
+        android:title=""/>
+</menu>

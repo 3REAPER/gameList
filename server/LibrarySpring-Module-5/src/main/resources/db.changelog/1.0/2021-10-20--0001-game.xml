@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="2021-10-20--0001-game" author="anepretimov">
+
+        <!-- Проверяем нет ли уже таблицы с таким названием -->
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="game"/>
+            </not>
+        </preConditions>
+
+        <!-- Создаем таблицу -->
+        <createTable tableName="game">
+
+            <!-- Описываем колонки -->
+            <column name="id"
+                    type="NUMERIC(19,0)"
+                    autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="description" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="rating" type="NUMERIC(19, 2)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="count_rating" type="NUMERIC(19,0)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="author_id" type="NUMERIC(19,0)">
+                <constraints nullable="false" foreignKeyName="fk_game_author" references="author(id)"
+                             deleteCascade="true"/>
+            </column>
+
+            <column name="genre_id" type="NUMERIC(19,0)">
+                <constraints nullable="false" foreignKeyName="fk_game_genre" references="genre(id)"
+                             deleteCascade="true"/>
+            </column>
+
+        </createTable>
+
+    </changeSet>
+
+
+</databaseChangeLog>

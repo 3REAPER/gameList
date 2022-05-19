@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_list">
+
+    <fragment
+        android:id="@+id/nav_list"
+        android:name="ru.pervukhin.gamelist.ui.fragments.ListFragment"
+        tools:layout="@layout/fragment_list" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_create"
+        android:name="ru.pervukhin.gamelist.ui.fragments.CreateFragment"
+        tools:layout="@layout/fragment_create" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_rating"
+        android:name="ru.pervukhin.gamelist.ui.fragments.RatingFragment"
+        tools:layout="@layout/fragment_rating" >
+    </fragment>
+    <fragment
+        android:id="@+id/nav_edit"
+        android:name="ru.pervukhin.gamelist.ui.fragments.EditFragment"
+        tools:layout="@layout/fragment_edit" />
+
+</navigation>

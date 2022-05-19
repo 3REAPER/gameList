@@ -1,0 +1,21 @@
+<resources>
+
+    <string name="app_name">GameList</string>
+    <string name="game_list">Список Игр</string>
+    <string name="menu_list">Список</string>
+    <string name="menu_add">Добавить и изменить</string>
+    <string name="menu_rating">Рейтинг</string>
+    <string name="edit">Изменить</string>
+
+    <string name="create">Создать</string>
+    <string name="game_name">Имя</string>
+    <string name="game_description">Описание</string>
+    <string name="game_rating">Рейтинг</string>
+    <string name="game_author">Студия</string>
+    <string name="game_genre">Жанр</string>
+
+    <string name="rating">Оценки</string>
+    <string name="send">Оценить</string>
+    <string name="your_rating">Ваши оценки</string>
+
+</resources>

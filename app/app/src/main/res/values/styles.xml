@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Material" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/main_color</item>
+        <item name="android:windowBackground">@color/main_color</item>
+    </style>
+
+    <style name="CustomRatingBar" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorControlNormal">@color/purple</item>
+        <item name="colorControlActivated">@color/purple</item>
+    </style>
+
+    <style name="navigationBar" parent="Theme.AppCompat">
+    <item name="itemFillColor">@color/white</item>
+    </style>
+</resources>

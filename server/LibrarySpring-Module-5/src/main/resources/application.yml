@@ -1,0 +1,33 @@
+# Конфигурационный файл
+server:
+  port: 8082
+
+spring:
+
+  # Подключение к H2 бд через jdbc
+  datasource:
+    url: jdbc:h2:mem:testdb
+
+  # Включение консоли
+  h2:
+    console:
+      #enabled: false
+      enabled: true
+
+  # Включение liquibase и установка основного файла
+  liquibase:
+    enabled: true
+    change-log: classpath:db.changelog/db.changelog-master.xml
+
+  jpa:
+
+    # Отключаем автогенерацию схемы
+    generate-ddl: false
+    #generate-ddl: true
+
+    hibernate:
+      ddl-auto: none
+      #ddl-auto: create-drop
+
+    # Показываем запросы
+    show-sql: true
