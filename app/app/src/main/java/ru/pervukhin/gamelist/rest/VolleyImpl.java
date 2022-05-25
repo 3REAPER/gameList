@@ -35,7 +35,7 @@ import ru.pervukhin.gamelist.domain.mapper.GenreMapper;
 
 public class VolleyImpl implements GameAPI {
 
-    public static final String URL = "http://192.168.0.178:8082";
+    public static final String URL = "http://192.168.0.177:8082"; //write here url
     private Context context;
     private Response.ErrorListener errorListener;
     private AppDataBase dataBase;
