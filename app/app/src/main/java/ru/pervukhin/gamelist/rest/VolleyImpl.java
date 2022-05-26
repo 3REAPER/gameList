@@ -38,14 +38,11 @@ public class VolleyImpl implements GameAPI {
     public static final String URL = "http://192.168.0.177:8082"; //write here url
     private Context context;
     private Response.ErrorListener errorListener;
-    private AppDataBase dataBase;
     private WeakReference<ListFragment> fragment;
 
     public VolleyImpl(Context context,WeakReference<ListFragment> fragment) {
-        dataBase = App.getInstance().getDatabase();
         this.context = context;
         this.fragment = fragment;
-        dataBase = App.getInstance().getDatabase();
         errorListener = new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
