@@ -61,7 +61,7 @@ public class RecycleRatingAdapter extends RecyclerView.Adapter<RecycleRatingAdap
             public void onClick(View view) {
                if (context != null){
                    float result = ratingBar.getRating() * 2;
-                   fragment.get().onRatingSet(context,game.getId(),Math.round(result));
+                   fragment.get().onRatingSet(context,game.getId(),Math.round(result),getItemCount() - 1);
                    data.remove(position);
                    notifyDataSetChanged();
                }
